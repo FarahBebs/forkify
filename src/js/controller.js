@@ -115,7 +115,9 @@ const controlAddRecipe = async newRecipe => {
     console.error(err.message);
   }
 };
-
+const nothing = () => {
+  console.log(3);
+};
 const init = () => {
   bookmarksView.addHandelerRender(controlBookmarks);
   recipeView.addHandelerRender(controlRecipes);
@@ -124,5 +126,6 @@ const init = () => {
   searchView.addHandelerSearch(controlSrearchResults);
   pagenationView.addHandelerClick(controlPagenation);
   addRecipeView.addHandelerUpload(controlAddRecipe);
+  nothing();
 };
 init();
